@@ -28,6 +28,10 @@ Me apasiona crear experiencias de usuario fluidas y arquitecturas de sistema só
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Alejandro120325&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="Estadísticas de Alejandro" />
+  
+  <br/>
+
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Alejandro120325&layout=compact&theme=dark&hide=html,css" alt="Lenguajes más usados de Alejandro" />
 </p>
 
 ---
