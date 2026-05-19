@@ -22,6 +22,7 @@
 ## 🧭 Sobre Mí
 
 
+
 ```typescript
 const alejandro = {
   rol:          "Ingeniero en Ciencias de la Computación",
@@ -32,6 +33,7 @@ const alejandro = {
   aprendiendo:  ["Cloud Architecture", "Diseño de Sistemas Distribuidos"],
 };
 ```
+
 
 
 Estudiante de **Ingeniería en Ciencias de la Computación** en la **UPS**. Mi trabajo se centra en construir **sistemas robustos** y diseñar **interfaces de alto impacto** donde la ingeniería y la estética convergen.
@@ -97,24 +99,89 @@ Implementación y configuración de redes empresariales (VLANs, ruteo dinámico,
 
 <div align="center">
 
+<!-- ─── FILA 1: PERFIL ─── -->
+
 <a href="https://github.com/Alejandro120325">
-  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Alejandro120325&theme=github_dark" alt="GitHub Stats" />
+  <img width="60%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Alejandro120325&theme=github_dark" alt="Profile Details" />
 </a>
+
+<br/><br/>
+
+<!-- ─── FILA 2: STATS GENERALES ─── -->
+
 <a href="https://github.com/Alejandro120325">
-  <img width="49%" src="https://streak-stats.demolab.com?user=Alejandro120325&theme=tokyonight&background=0D1117&ring=DAA520&fire=DAA520&currStreakNum=DAA520&sideNums=FFFFFF&sideLabels=FFFFFF&dates=DAA520&stroke=DAA520&border=DAA520&hide_border=false" alt="GitHub Streak" />
+  <img width="60%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Alejandro120325&theme=github_dark" alt="GitHub Stats" />
+</a>
+
+<br/><br/>
+
+<!-- ─── FILA 3: RACHA DE COMMITS ─── -->
+
+<a href="https://github.com/Alejandro120325">
+  <img width="60%" src="https://streak-stats.demolab.com?user=Alejandro120325&theme=tokyonight&background=0D1117&ring=DAA520&fire=DAA520&currStreakNum=DAA520&sideNums=FFFFFF&sideLabels=FFFFFF&dates=DAA520&stroke=DAA520&border=DAA520&hide_border=false" alt="GitHub Streak" />
+</a>
+
+<br/><br/>
+
+<!-- ─── FILA 4: LENGUAJES POR REPO ─── -->
+
+<a href="https://github.com/Alejandro120325">
+  <img width="60%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Alejandro120325&theme=github_dark" alt="Repos per Language" />
+</a>
+
+<br/><br/>
+
+<!-- ─── FILA 5: LENGUAJES POR COMMIT ─── -->
+
+<a href="https://github.com/Alejandro120325">
+  <img width="60%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Alejandro120325&theme=github_dark" alt="Most Commit Language" />
+</a>
+
+<br/><br/>
+
+<!-- ─── FILA 6: HORARIO PRODUCTIVO ─── -->
+
+<a href="https://github.com/Alejandro120325">
+  <img width="60%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Alejandro120325&theme=github_dark&utcOffset=-5" alt="Productive Time" />
+</a>
+
+</div>
+
+---
+
+## 🌌 Tech Universe — Stack Visual Interactivo
+
+<div align="center">
+
+<i>Pasa el cursor sobre cada icono para descubrir su nombre ✨</i>
+
+<br/><br/>
+
+<a href="https://github.com/Alejandro120325">
+  <img src="https://skillicons.dev/icons?i=cs,java,cpp,py,nodejs,react,js,ts&theme=dark&perline=8" alt="Backend & Languages" />
 </a>
 
 <br/><br/>
 
 <a href="https://github.com/Alejandro120325">
-  <img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Alejandro120325&theme=github_dark" alt="Repos per Language" />
+  <img src="https://skillicons.dev/icons?i=html,css,tailwind,figma,gsap,threejs,vite,vercel&theme=dark&perline=8" alt="Frontend & Design" />
 </a>
+
+<br/><br/>
+
 <a href="https://github.com/Alejandro120325">
-  <img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Alejandro120325&theme=github_dark" alt="Most Commit Language" />
+  <img src="https://skillicons.dev/icons?i=mysql,mongodb,postgres,git,github,vscode,visualstudio,postman&theme=dark&perline=8" alt="DB & Tools" />
 </a>
+
+<br/><br/>
+
 <a href="https://github.com/Alejandro120325">
-  <img width="32.5%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Alejandro120325&theme=github_dark&utcOffset=-5" alt="Productive Time" />
+  <img src="https://skillicons.dev/icons?i=cisco,linux,bash,docker,nginx,powershell,windows,obsidian&theme=dark&perline=8" alt="Networking & Systems" />
 </a>
+
+<br/><br/>
+
+<sub><i>🎮 Iconos 3D renderizados con efecto hover — Click sobre cualquiera para visitar mi GitHub</i></sub>
 
 </div>
 
