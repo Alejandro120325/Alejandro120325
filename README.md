@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/profile-header.svg" alt="Banner animado de Alejandro Ojeda — Ingeniería de software" width="100%" />
+  <img src="./assets/profile-header-animated.svg" alt="Banner animado de Alejandro Ojeda — Ingeniería de software" width="100%" />
 </p>
 
 <h1 align="center">Hola, soy Jairo Alejandro Ojeda Herrera 👋</h1>
