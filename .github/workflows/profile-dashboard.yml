@@ -98,5 +98,7 @@ jobs:
             exit 0
           fi
           git commit -m "chore(profile): refresh live dashboard [skip ci]"
+          git fetch origin main
+          git rebase origin/main
           git push
 
