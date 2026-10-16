@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/profile-header.svg" alt="Alejandro Ojeda — Software Engineering" width="100%" />
+  <img src="./assets/profile-header.svg" alt="Banner animado de Alejandro Ojeda — Ingeniería de software" width="100%" />
 </p>
 
 <h1 align="center">Hola, soy Jairo Alejandro Ojeda Herrera 👋</h1>
@@ -48,6 +48,10 @@ const alejandro = {
     </td>
   </tr>
 </table>
+
+<p align="center">
+  <img src="./assets/engineering-loop.svg" alt="Mi ciclo de ingeniería: idea, arquitectura, código e impacto" width="100%" />
+</p>
 
 ## 🚀 Proyectos seleccionados
 

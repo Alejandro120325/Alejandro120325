@@ -1,76 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-  <title id="title">Alejandro Ojeda — Software Engineering</title>
-  <desc id="desc">Banner profesional en tonos negro y dorado para el perfil de GitHub de Alejandro Ojeda.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Alejandro Ojeda — Ingeniería de software</title>
+  <desc id="desc">Banner animado negro y dorado con órbitas, partículas, destellos y una interfaz tecnológica.</desc>
 
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#05070b"/>
-      <stop offset="0.5" stop-color="#0d1117"/>
-      <stop offset="1" stop-color="#161b22"/>
+      <stop offset="0" stop-color="#030508" />
+      <stop offset="0.48" stop-color="#0d1117" />
+      <stop offset="1" stop-color="#151a22" />
     </linearGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#9f7414"/>
-      <stop offset="0.28" stop-color="#f6d365"/>
-      <stop offset="0.52" stop-color="#fff1a8"/>
-      <stop offset="0.76" stop-color="#d4af37"/>
-      <stop offset="1" stop-color="#8f6411"/>
+      <stop offset="0" stop-color="#8f6411" />
+      <stop offset="0.28" stop-color="#f2d57e" />
+      <stop offset="0.5" stop-color="#fff6c7" />
+      <stop offset="0.76" stop-color="#d4af37" />
+      <stop offset="1" stop-color="#8f6411" />
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d4af37" stop-opacity="0" />
+      <stop offset="0.5" stop-color="#fff1a8" stop-opacity="0.16" />
+      <stop offset="1" stop-color="#d4af37" stop-opacity="0" />
     </linearGradient>
     <radialGradient id="halo" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#d4af37" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#d4af37" stop-opacity="0"/>
+      <stop offset="0" stop-color="#d4af37" stop-opacity="0.24" />
+      <stop offset="0.55" stop-color="#d4af37" stop-opacity="0.07" />
+      <stop offset="1" stop-color="#d4af37" stop-opacity="0" />
     </radialGradient>
     <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
-      <path d="M 42 0 L 0 0 0 42" fill="none" stroke="#d4af37" stroke-opacity="0.055" stroke-width="1"/>
+      <path d="M42 0H0V42" fill="none" stroke="#d4af37" stroke-opacity="0.055" stroke-width="1" />
     </pattern>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <pattern id="microGrid" width="9" height="9" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.65" fill="#d4af37" opacity="0.17" />
+    </pattern>
+    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
     </filter>
-    <clipPath id="frame">
-      <rect width="1200" height="360" rx="24"/>
-    </clipPath>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <clipPath id="frame"><rect width="1200" height="420" rx="26" /></clipPath>
   </defs>
 
+  <style>
+    @keyframes haloPulse { 0%,100% { opacity:.55 } 50% { opacity:1 } }
+    @keyframes scanMove { 0% { transform:translateX(-520px) skewX(-15deg) } 100% { transform:translateX(1600px) skewX(-15deg) } }
+    @keyframes dashLeft { to { stroke-dashoffset:-136 } }
+    @keyframes dashRight { to { stroke-dashoffset:136 } }
+    @keyframes spinCW { to { transform:rotate(360deg) } }
+    @keyframes spinCCW { to { transform:rotate(-360deg) } }
+    @keyframes twinkle { 0%,100% { opacity:.18 } 50% { opacity:1 } }
+    @keyframes floatUp { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-16px) } }
+    @keyframes drawLine { 0%,12% { stroke-dashoffset:470 } 42%,100% { stroke-dashoffset:0 } }
+    @keyframes blink { 0%,45% { opacity:1 } 46%,100% { opacity:0 } }
+    @keyframes signal { to { stroke-dashoffset:-120 } }
+    .halo { animation:haloPulse 5s ease-in-out infinite }
+    .scanner { animation:scanMove 7s linear infinite }
+    .dash-left { animation:dashLeft 8s linear infinite }
+    .dash-right { animation:dashRight 8s linear infinite }
+    .spin-cw { transform-origin:105px 205px; animation:spinCW 8s linear infinite }
+    .spin-ccw { transform-origin:1095px 205px; animation:spinCCW 10s linear infinite }
+    .twinkle-a { animation:twinkle 2.4s ease-in-out infinite }
+    .twinkle-b { animation:twinkle 3.2s 1s ease-in-out infinite }
+    .float-a { animation:floatUp 4.2s ease-in-out infinite }
+    .float-b { animation:floatUp 5.1s 1.2s ease-in-out infinite reverse }
+    .draw-line { animation:drawLine 5s ease-in-out infinite }
+    .cursor { animation:blink .9s steps(1,end) infinite }
+    .signal { animation:signal 4s linear infinite }
+    @media (prefers-reduced-motion: reduce) {
+      .halo,.scanner,.dash-left,.dash-right,.spin-cw,.spin-ccw,.twinkle-a,.twinkle-b,.float-a,.float-b,.draw-line,.cursor,.signal { animation:none !important }
+      .scanner { display:none }
+    }
+  </style>
+
   <g clip-path="url(#frame)">
-    <rect width="1200" height="360" fill="url(#background)"/>
-    <rect width="1200" height="360" fill="url(#grid)"/>
-    <ellipse cx="600" cy="175" rx="430" ry="220" fill="url(#halo)"/>
+    <rect width="1200" height="420" fill="url(#background)" />
+    <rect width="1200" height="420" fill="url(#grid)" />
+    <rect width="1200" height="420" fill="url(#microGrid)" opacity="0.24" />
+    <ellipse class="halo" cx="600" cy="205" rx="470" ry="238" fill="url(#halo)" />
+    <rect class="scanner" x="0" y="0" width="420" height="420" fill="url(#scan)" />
 
-    <g fill="none" stroke="#d4af37" stroke-opacity="0.22">
-      <circle cx="88" cy="180" r="108"/>
-      <circle cx="88" cy="180" r="76" stroke-dasharray="3 9"/>
-      <circle cx="1112" cy="180" r="108"/>
-      <circle cx="1112" cy="180" r="76" stroke-dasharray="3 9"/>
+    <g fill="none" stroke="#d4af37">
+      <circle cx="105" cy="205" r="128" stroke-opacity="0.18" />
+      <circle class="dash-left" cx="105" cy="205" r="92" stroke-opacity="0.3" stroke-dasharray="5 12" />
+      <circle class="dash-right" cx="105" cy="205" r="58" stroke-opacity="0.2" stroke-dasharray="2 9" />
+      <circle cx="1095" cy="205" r="128" stroke-opacity="0.18" />
+      <circle class="dash-right" cx="1095" cy="205" r="92" stroke-opacity="0.3" stroke-dasharray="5 12" />
+      <circle class="dash-left" cx="1095" cy="205" r="58" stroke-opacity="0.2" stroke-dasharray="2 9" />
     </g>
 
-    <g fill="#d4af37">
-      <circle cx="88" cy="72" r="4" filter="url(#glow)" />
-      <circle cx="1112" cy="288" r="4" filter="url(#glow)" />
-      <circle cx="187" cy="72" r="2" opacity="0.6"/>
-      <circle cx="1027" cy="98" r="2" opacity="0.5"/>
-      <circle cx="214" cy="288" r="2" opacity="0.45"/>
-      <circle cx="989" cy="274" r="2" opacity="0.6"/>
+    <g class="spin-cw" fill="#d4af37" filter="url(#glow)"><circle cx="105" cy="77" r="4" /></g>
+    <g class="spin-ccw" fill="#d4af37" filter="url(#glow)"><circle cx="1095" cy="333" r="4" /></g>
+
+    <g fill="#f2d57e">
+      <circle class="twinkle-a" cx="236" cy="78" r="2" />
+      <circle class="float-a" cx="287" cy="337" r="2.2" />
+      <circle class="float-b" cx="932" cy="77" r="2.1" />
+      <circle class="twinkle-b" cx="978" cy="330" r="1.8" />
+      <circle class="twinkle-a" cx="405" cy="59" r="1.5" />
+      <circle class="twinkle-b" cx="801" cy="356" r="1.6" />
     </g>
 
-    <path d="M0 25 H245 L270 0" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.8"/>
-    <path d="M1200 335 H955 L930 360" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.8"/>
+    <path d="M0 27H250L278 0" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.9" />
+    <path d="M1200 393H950L922 420" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.9" />
+    <path class="signal" d="M0 384H126" fill="none" stroke="#d4af37" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="7 8" />
+    <path class="signal" d="M1074 36H1200" fill="none" stroke="#d4af37" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="7 8" />
 
     <g font-family="Segoe UI, Inter, Arial, sans-serif" text-anchor="middle">
-      <text x="600" y="101" fill="#8b949e" font-size="14" font-weight="600" letter-spacing="7">INGENIERÍA DE SOFTWARE</text>
-      <text x="600" y="181" fill="url(#gold)" font-size="62" font-weight="800" letter-spacing="4" filter="url(#glow)">ALEJANDRO OJEDA</text>
-      <rect x="382" y="207" width="436" height="1.5" rx="1" fill="url(#gold)" opacity="0.9"/>
-      <text x="600" y="249" fill="#e6edf3" font-size="18" font-weight="500" letter-spacing="3">FULL-STACK  ·  EXPERIENCIAS INTERACTIVAS  ·  SISTEMAS</text>
-      <text x="600" y="295" fill="#d4af37" font-size="13" font-weight="600" letter-spacing="4">QUITO  ·  ECUADOR  ·  UTC−5</text>
+      <g transform="translate(600 58)">
+        <circle class="twinkle-a" cx="-137" cy="-4" r="5" fill="#d4af37" filter="url(#glow)" />
+        <text x="12" y="1" fill="#8b949e" font-size="13" font-weight="700" letter-spacing="6">SYSTEM ONLINE · UTC−5</text>
+      </g>
+      <text x="600" y="115" fill="#8b949e" font-size="14" font-weight="600" letter-spacing="7">INGENIERÍA DE SOFTWARE</text>
+      <text x="600" y="197" fill="url(#gold)" font-size="64" font-weight="800" letter-spacing="4" filter="url(#softGlow)">ALEJANDRO OJEDA</text>
+      <path class="draw-line" d="M365 222H835" fill="none" stroke="url(#gold)" stroke-width="2" stroke-dasharray="470" stroke-dashoffset="470" />
+      <text x="600" y="266" fill="#e6edf3" font-size="18" font-weight="500" letter-spacing="3">FULL-STACK · EXPERIENCIAS INTERACTIVAS · SISTEMAS</text>
+      <text x="600" y="305" fill="#d4af37" font-size="13" font-weight="600" letter-spacing="4">ARQUITECTURA CLARA · CÓDIGO LIMPIO · IMPACTO REAL</text>
+      <g transform="translate(420 339)">
+        <rect width="360" height="42" rx="8" fill="#090c11" stroke="#d4af37" stroke-opacity="0.35" />
+        <text x="180" y="26" fill="#8b949e" font-family="Consolas, JetBrains Mono, monospace" font-size="13" letter-spacing="1">$ build --from idea --to impact</text>
+        <rect class="cursor" x="322" y="14" width="8" height="14" rx="1" fill="#d4af37" />
+      </g>
     </g>
 
-    <g font-family="Consolas, monospace" font-size="24" fill="#d4af37" opacity="0.55">
-      <text x="72" y="189">&lt;/&gt;</text>
-      <text x="1080" y="189">{ }</text>
+    <g font-family="Consolas, monospace" font-size="23" fill="#d4af37" opacity="0.72">
+      <text x="78" y="214">&lt;/&gt;</text>
+      <text x="1065" y="214">{ }</text>
     </g>
   </g>
-  <rect x="1" y="1" width="1198" height="358" rx="23" fill="none" stroke="#d4af37" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="1" y="1" width="1198" height="418" rx="25" fill="none" stroke="#d4af37" stroke-opacity="0.42" stroke-width="2" />
 </svg>
 
