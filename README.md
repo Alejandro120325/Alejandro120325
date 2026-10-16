@@ -18,6 +18,12 @@
 
 </div>
 
+<p align="center">
+  <img src="https://img.shields.io/github/followers/Alejandro120325?style=for-the-badge&amp;label=FOLLOWERS&amp;color=D4AF37&amp;labelColor=0D1117" alt="Seguidores en GitHub" />
+  <img src="https://img.shields.io/github/stars/Alejandro120325?affiliations=OWNER&amp;style=for-the-badge&amp;label=TOTAL%20STARS&amp;color=D4AF37&amp;labelColor=0D1117" alt="Estrellas recibidas en repositorios propios" />
+  <img src="https://img.shields.io/github/actions/workflow/status/Alejandro120325/Alejandro120325/profile-dashboard.yml?branch=main&amp;style=for-the-badge&amp;label=LIVE%20METRICS&amp;labelColor=0D1117&amp;color=D4AF37" alt="Estado de actualización de las métricas" />
+</p>
+
 ## 👋 Sobre mí
 
 Soy **Jairo Alejandro Ojeda Herrera**, estudiante de **Ingeniería en Ciencias de la Computación** en la Universidad Politécnica Salesiana. Desarrollo soluciones full-stack con una idea clara: la tecnología debe ser sólida por dentro, intuitiva por fuera y útil para quien la utiliza.
@@ -49,9 +55,13 @@ const alejandro = {
   </tr>
 </table>
 
+## ⚡ Engineering control room
+
 <p align="center">
-  <img src="./assets/engineering-loop.svg" alt="Mi ciclo de ingeniería: idea, arquitectura, código e impacto" width="100%" />
+  <img src="./assets/engineering-control-room.svg" alt="Panel animado de ingeniería con pipeline, arquitectura, stack y proyectos" width="100%" />
 </p>
+
+<p align="center"><sub>Una visualización animada de cómo convierto contexto en arquitectura, código verificado e impacto.</sub></p>
 
 ## 🚀 Proyectos seleccionados
 
@@ -124,16 +134,51 @@ Recorrido web responsivo con narrativa visual, galería multimedia, evaluación 
 - ☁️ **Arquitectura cloud:** despliegue y separación de frontend, API y persistencia para aplicaciones full-stack.
 - 🎨 **Experiencias interactivas:** visualización 3D, motion design y accesibilidad aplicada a productos web.
 
-## 📊 Actividad en GitHub
+## 📊 GitHub command center
 
-<div align="center">
+<p align="center">
+  <strong>Telemetría real de mi actividad pública</strong><br />
+  <sub>El dashboard se regenera automáticamente cada día mediante GitHub Actions.</sub>
+</p>
 
-<img height="175" src="https://github-readme-stats.vercel.app/api?username=Alejandro120325&amp;show_icons=true&amp;rank_icon=github&amp;hide_border=true&amp;bg_color=0D1117&amp;title_color=D4AF37&amp;icon_color=D4AF37&amp;text_color=C9D1D9&amp;locale=es" alt="Estadísticas de GitHub de Alejandro" />
-<img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Alejandro120325&amp;layout=compact&amp;hide_border=true&amp;bg_color=0D1117&amp;title_color=D4AF37&amp;text_color=C9D1D9&amp;locale=es&amp;langs_count=8" alt="Lenguajes más utilizados por Alejandro" />
+<table>
+  <tr>
+    <th align="center"><code>01 / PERFORMANCE OVERVIEW</code></th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="495" src="./assets/generated/github-stats.svg" alt="Resumen actualizado de estrellas, commits, pull requests, issues y contribuciones" />
+    </td>
+  </tr>
+  <tr>
+    <th align="center"><code>02 / CONTRIBUTION STREAK</code></th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="495" src="./assets/generated/contribution-streak.svg" alt="Racha actualizada de contribuciones de Alejandro" />
+    </td>
+  </tr>
+  <tr>
+    <th align="center"><code>03 / LANGUAGE ANALYTICS</code></th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="495" src="./assets/generated/top-languages.svg" alt="Distribución actualizada de lenguajes en repositorios públicos" />
+    </td>
+  </tr>
+</table>
 
-<sub>Las métricas se generan automáticamente a partir de la actividad pública en GitHub.</sub>
+### 🐍 Contribution stream
 
-</div>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/generated/contribution-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/generated/contribution-snake.svg" />
+    <img width="100%" src="./assets/generated/contribution-snake.svg" alt="Animación del historial real de contribuciones de Alejandro" />
+  </picture>
+</p>
+
+<p align="center"><sub>La serpiente recorre el calendario real de contribuciones y se actualiza junto con las métricas.</sub></p>
 
 ## 🤝 Conectemos
 
