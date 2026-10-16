@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">Engineering Control Room de Alejandro Ojeda</title>
+  <desc id="desc">Panel animado que representa el flujo de ingeniería, la arquitectura full-stack, las tecnologías y los proyectos principales de Alejandro.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080b10"/>
+      <stop offset="0.52" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#090c12"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#8f6b16"/>
+      <stop offset="0.5" stop-color="#f2d57e"/>
+      <stop offset="1" stop-color="#d4af37"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#d4af37" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#f2d57e" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#d4af37" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="nodeGlow">
+      <stop stop-color="#f2d57e" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#d4af37" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#d4af37" stroke-opacity="0.055"/>
+    </pattern>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="terminalClip"><rect x="663" y="92" width="180" height="18" rx="2"/></clipPath>
+    <clipPath id="tickerClip"><rect x="26" y="458" width="1148" height="22" rx="4"/></clipPath>
+  </defs>
+
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+    .sans{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    .muted{fill:#8b949e}.white{fill:#e6edf3}.gold{fill:#d4af37}.gold-stroke{stroke:#d4af37}
+    .panel{fill:#0d1117;stroke:#d4af37;stroke-opacity:.24}.hair{stroke:#d4af37;stroke-opacity:.18}
+    .scan-beam{animation:scan 8s cubic-bezier(.4,0,.2,1) infinite}
+    .grid-flow{stroke-dasharray:7 13;animation:flow 4s linear infinite}
+    .signal{animation:signal 3.2s ease-in-out infinite}.s2{animation-delay:.4s}.s3{animation-delay:.8s}.s4{animation-delay:1.2s}.s5{animation-delay:1.6s}
+    .orbit{animation:orbit 14s linear infinite;transform-origin:555px 241px}.orbit-reverse{animation:orbitBack 10s linear infinite;transform-origin:555px 241px}
+    .pulse{animation:pulse 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .pulse-late{animation-delay:1.2s}.packet-a{animation:packetA 5s ease-in-out infinite}.packet-b{animation:packetB 6s ease-in-out infinite 1s}
+    .draw{stroke-dasharray:430;stroke-dashoffset:430;animation:draw 5.5s ease-in-out infinite}
+    .bar{transform-box:fill-box;transform-origin:center bottom;animation:bar 3s ease-in-out infinite}.b2{animation-delay:.35s}.b3{animation-delay:.7s}.b4{animation-delay:1.05s}.b5{animation-delay:1.4s}
+    .cursor{animation:blink 1s steps(2,end) infinite}.terminal{animation:type 6s steps(22,end) infinite}
+    .radar{animation:orbit 5s linear infinite;transform-origin:555px 241px}.ticker{animation:ticker 18s linear infinite}
+    .spark{animation:spark 3.5s ease-in-out infinite}.spark.s2{animation-delay:.8s}.spark.s3{animation-delay:1.6s}
+    @keyframes scan{0%,12%{transform:translateX(-240px);opacity:0}20%{opacity:1}70%{opacity:1}82%,100%{transform:translateX(1440px);opacity:0}}
+    @keyframes flow{to{stroke-dashoffset:-40}}
+    @keyframes signal{0%,100%{fill:#3f3418;filter:none}45%,62%{fill:#f2d57e;filter:url(#softGlow)}}
+    @keyframes orbit{to{transform:rotate(360deg)}}@keyframes orbitBack{to{transform:rotate(-360deg)}}
+    @keyframes pulse{0%,100%{transform:scale(.86);opacity:.45}50%{transform:scale(1.2);opacity:1}}
+    @keyframes packetA{0%,10%{transform:translate(0,0);opacity:0}18%{opacity:1}88%{opacity:1}100%{transform:translate(196px,-83px);opacity:0}}
+    @keyframes packetB{0%,10%{transform:translate(0,0);opacity:0}20%{opacity:1}90%{opacity:1}100%{transform:translate(-176px,95px);opacity:0}}
+    @keyframes draw{0%,10%{stroke-dashoffset:430}55%,82%{stroke-dashoffset:0}100%{stroke-dashoffset:-430}}
+    @keyframes bar{0%,100%{transform:scaleY(.45);opacity:.45}50%{transform:scaleY(1);opacity:1}}
+    @keyframes blink{50%{opacity:0}}@keyframes type{0%,10%{transform:translateX(-178px)}45%,88%{transform:translateX(0)}100%{transform:translateX(-178px)}}
+    @keyframes ticker{to{transform:translateX(-590px)}}
+    @keyframes spark{0%,100%{opacity:.15}45%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){.scan-beam,.grid-flow,.signal,.orbit,.orbit-reverse,.pulse,.packet-a,.packet-b,.draw,.bar,.cursor,.terminal,.radar,.ticker,.spark{animation:none!important}.terminal{transform:none}.ticker{transform:none}}
+  </style>
+
+  <rect width="1200" height="500" rx="22" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="498" rx="21" fill="none" stroke="#d4af37" stroke-opacity=".35"/>
+  <rect x="1" y="1" width="1198" height="498" rx="21" fill="url(#grid)"/>
+  <rect class="scan-beam" x="0" y="1" width="230" height="456" fill="url(#scan)"/>
+
+  <!-- Header -->
+  <circle cx="28" cy="28" r="5" fill="#d4af37" class="pulse"/>
+  <text x="43" y="34" class="mono white" font-size="18" font-weight="700" letter-spacing="2">ENGINEERING CONTROL ROOM</text>
+  <text x="1174" y="33" text-anchor="end" class="mono muted" font-size="14">QUITO · UTC−5</text>
+  <path d="M26 51H1174" class="hair"/>
+  <text x="26" y="72" class="mono gold" font-size="11" letter-spacing="1.8">SYSTEM // ONLINE</text>
+  <text x="1174" y="72" text-anchor="end" class="mono muted" font-size="11">BUILDING RELIABLE DIGITAL EXPERIENCES</text>
+
+  <!-- Pipeline panel -->
+  <rect x="26" y="88" width="330" height="262" rx="14" class="panel"/>
+  <text x="46" y="116" class="mono white" font-size="14" font-weight="700">DELIVERY PIPELINE</text>
+  <text x="335" y="116" text-anchor="end" class="mono gold" font-size="10">CONTINUOUS</text>
+  <path d="M46 130H336" class="hair"/>
+  <path d="M69 164V300" stroke="#d4af37" stroke-opacity=".25" stroke-width="2" class="grid-flow"/>
+  <g class="sans" font-size="13">
+    <g><circle cx="69" cy="164" r="8" class="signal"/><circle cx="69" cy="164" r="3" fill="#0d1117"/><text x="91" y="169" class="white" font-weight="650">DISCOVER</text><text x="325" y="169" text-anchor="end" class="muted" font-size="11">context</text></g>
+    <g><circle cx="69" cy="198" r="8" class="signal s2"/><circle cx="69" cy="198" r="3" fill="#0d1117"/><text x="91" y="203" class="white" font-weight="650">DESIGN</text><text x="325" y="203" text-anchor="end" class="muted" font-size="11">architecture</text></g>
+    <g><circle cx="69" cy="232" r="8" class="signal s3"/><circle cx="69" cy="232" r="3" fill="#0d1117"/><text x="91" y="237" class="white" font-weight="650">BUILD</text><text x="325" y="237" text-anchor="end" class="muted" font-size="11">clean code</text></g>
+    <g><circle cx="69" cy="266" r="8" class="signal s4"/><circle cx="69" cy="266" r="3" fill="#0d1117"/><text x="91" y="271" class="white" font-weight="650">VERIFY</text><text x="325" y="271" text-anchor="end" class="muted" font-size="11">quality</text></g>
+    <g><circle cx="69" cy="300" r="8" class="signal s5"/><circle cx="69" cy="300" r="3" fill="#0d1117"/><text x="91" y="305" class="white" font-weight="650">SHIP</text><text x="325" y="305" text-anchor="end" class="muted" font-size="11">impact</text></g>
+  </g>
+  <rect x="46" y="321" width="290" height="11" rx="5.5" fill="#151a22"/>
+  <rect x="46" y="321" width="244" height="11" rx="5.5" fill="url(#gold)" opacity=".8"/>
+
+  <!-- Architecture panel -->
+  <rect x="370" y="88" width="370" height="262" rx="14" class="panel"/>
+  <text x="390" y="116" class="mono white" font-size="14" font-weight="700">ARCHITECTURE MAP</text>
+  <g clip-path="url(#terminalClip)">
+    <text x="663" y="105" class="mono gold terminal" font-size="10">deploy --quality=production</text>
+  </g>
+  <rect x="728" y="94" width="3" height="12" rx="1" fill="#f2d57e" class="cursor"/>
+  <path d="M390 130H720" class="hair"/>
+
+  <g fill="none" stroke="#d4af37">
+    <circle cx="555" cy="241" r="79" stroke-opacity=".12" stroke-dasharray="5 10" class="grid-flow"/>
+    <circle cx="555" cy="241" r="54" stroke-opacity=".22"/>
+    <path d="M555 241L451 176M555 241L659 176M555 241L451 307M555 241L659 307" stroke-opacity=".32" class="grid-flow"/>
+    <path d="M451 176C500 120 610 120 659 176M451 307C500 354 610 354 659 307" stroke-opacity=".14"/>
+  </g>
+  <circle cx="555" cy="241" r="53" fill="url(#nodeGlow)"/>
+  <circle cx="555" cy="241" r="34" fill="#15120a" stroke="#d4af37" stroke-opacity=".75"/>
+  <text x="555" y="238" text-anchor="middle" class="mono gold" font-size="11" font-weight="700">PRODUCT</text>
+  <text x="555" y="254" text-anchor="middle" class="mono white" font-size="9">CORE</text>
+  <g class="orbit"><circle cx="555" cy="162" r="4" fill="#f2d57e" filter="url(#softGlow)"/><circle cx="555" cy="320" r="2.5" fill="#d4af37"/></g>
+  <g class="orbit-reverse"><circle cx="609" cy="241" r="3" fill="#f2d57e"/><circle cx="501" cy="241" r="2" fill="#d4af37"/></g>
+  <path d="M555 241A70 70 0 0 1 617 208" fill="none" stroke="#f2d57e" stroke-opacity=".45" class="radar"/>
+
+  <g class="mono" font-size="10" text-anchor="middle">
+    <g><rect x="415" y="157" width="72" height="38" rx="8" fill="#11161e" stroke="#d4af37" stroke-opacity=".35"/><text x="451" y="180" class="white">FRONTEND</text></g>
+    <g><rect x="623" y="157" width="72" height="38" rx="8" fill="#11161e" stroke="#d4af37" stroke-opacity=".35"/><text x="659" y="180" class="white">API</text></g>
+    <g><rect x="415" y="288" width="72" height="38" rx="8" fill="#11161e" stroke="#d4af37" stroke-opacity=".35"/><text x="451" y="311" class="white">DATA</text></g>
+    <g><rect x="623" y="288" width="72" height="38" rx="8" fill="#11161e" stroke="#d4af37" stroke-opacity=".35"/><text x="659" y="311" class="white">CLOUD</text></g>
+  </g>
+  <circle cx="451" cy="176" r="4" fill="#f2d57e" class="packet-a"/>
+  <circle cx="659" cy="176" r="4" fill="#d4af37" class="packet-b"/>
+
+  <!-- Stack signal panel -->
+  <rect x="754" y="88" width="420" height="262" rx="14" class="panel"/>
+  <text x="774" y="116" class="mono white" font-size="14" font-weight="700">STACK SIGNAL</text>
+  <text x="1154" y="116" text-anchor="end" class="mono gold" font-size="10">8 CHANNELS</text>
+  <path d="M774 130H1154" class="hair"/>
+
+  <g class="mono" font-size="11">
+    <g transform="translate(774 151)"><rect width="94" height="29" rx="7" fill="#151a22" stroke="#d4af37" stroke-opacity=".25"/><circle cx="14" cy="14.5" r="3" fill="#d4af37" class="pulse"/><text x="25" y="18.5" class="white">JavaScript</text></g>
+    <g transform="translate(878 151)"><rect width="92" height="29" rx="7" fill="#151a22" stroke="#d4af37" stroke-opacity=".25"/><circle cx="14" cy="14.5" r="3" fill="#d4af37" class="pulse pulse-late"/><text x="25" y="18.5" class="white">TypeScript</text></g>
+    <g transform="translate(980 151)"><rect width="78" height="29" rx="7" fill="#151a22" stroke="#d4af37" stroke-opacity=".25"/><circle cx="14" cy="14.5" r="3" fill="#d4af37" class="pulse"/><text x="25" y="18.5" class="white">Java</text></g>
+    <g transform="translate(1068 151)"><rect width="86" height="29" rx="7" fill="#151a22" stroke="#d4af37" stroke-opacity=".25"/><circle cx="14" cy="14.5" r="3" fill="#d4af37" class="pulse pulse-late"/><text x="25" y="18.5" class="white">Python</text></g>
+    <g transform="translate(774 190)"><rect width="94" height="29" rx="7" fill="#151a22" stroke="#d4af37" stroke-opacity=".25"/><circle cx="14" cy="14.5" r="3" fill="#d4af37" class="pulse pulse-late"/><text x="25" y="18.5" class="white">React</text></g>
+    <g transform="translate(878 190)"><rect width="92" height="29" rx="7" fill="#151a22" stroke="#d4af37" stroke-opacity=".25"/><circle cx="14" cy="14.5" r="3" fill="#d4af37" class="pulse"/><text x="25" y="18.5" class="white">Node.js</text></g>
+    <g transform="translate(980 190)"><rect width="78" height="29" rx="7" fill="#151a22" stroke="#d4af37" stroke-opacity=".25"/><circle cx="14" cy="14.5" r="3" fill="#d4af37" class="pulse pulse-late"/><text x="25" y="18.5" class="white">SQL</text></g>
+    <g transform="translate(1068 190)"><rect width="86" height="29" rx="7" fill="#151a22" stroke="#d4af37" stroke-opacity=".25"/><circle cx="14" cy="14.5" r="3" fill="#d4af37" class="pulse"/><text x="25" y="18.5" class="white">Three.js</text></g>
+  </g>
+
+  <path d="M780 300C812 288 830 307 857 277S905 294 927 260S973 284 999 246S1044 261 1070 232S1116 245 1148 226" fill="none" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round" class="draw"/>
+  <path d="M780 320H1148M780 280H1148M780 240H1148" class="hair" stroke-dasharray="2 7"/>
+  <g fill="url(#gold)">
+    <rect x="786" y="300" width="7" height="20" rx="2" class="bar"/>
+    <rect x="804" y="288" width="7" height="32" rx="2" class="bar b2"/>
+    <rect x="822" y="296" width="7" height="24" rx="2" class="bar b3"/>
+    <rect x="840" y="278" width="7" height="42" rx="2" class="bar b4"/>
+    <rect x="858" y="267" width="7" height="53" rx="2" class="bar b5"/>
+  </g>
+  <text x="1148" y="337" text-anchor="end" class="mono muted" font-size="9">SIGNAL: ARCHITECTURE · PERFORMANCE · UX</text>
+
+  <!-- Project strip -->
+  <rect x="26" y="366" width="1148" height="75" rx="14" class="panel"/>
+  <text x="46" y="390" class="mono muted" font-size="10" letter-spacing="1.5">FEATURED SYSTEMS</text>
+  <g class="sans" font-size="13" font-weight="700">
+    <g><circle cx="54" cy="415" r="4" fill="#d4af37" class="spark"/><text x="67" y="420" class="white">FOLIO</text><text x="126" y="420" class="mono muted" font-size="10" font-weight="400">COMMERCE</text></g>
+    <path d="M250 388V426" class="hair"/>
+    <g><circle cx="282" cy="415" r="4" fill="#d4af37" class="spark s2"/><text x="295" y="420" class="white">GEOKIPU</text><text x="376" y="420" class="mono muted" font-size="10" font-weight="400">GEO · PRIVACY</text></g>
+    <path d="M522 388V426" class="hair"/>
+    <g><circle cx="554" cy="415" r="4" fill="#d4af37" class="spark s3"/><text x="567" y="420" class="white">EDUCOSMOS</text><text x="671" y="420" class="mono muted" font-size="10" font-weight="400">3D LEARNING</text></g>
+    <path d="M818 388V426" class="hair"/>
+    <g><circle cx="850" cy="415" r="4" fill="#d4af37" class="spark"/><text x="863" y="420" class="white">MUSEO</text><text x="927" y="420" class="mono muted" font-size="10" font-weight="400">CULTURE · MOTION</text></g>
+  </g>
+
+  <!-- Infinite ticker -->
+  <g clip-path="url(#tickerClip)">
+    <g class="ticker mono" font-size="11" font-weight="700" letter-spacing="2">
+      <text x="26" y="476" class="gold">ARCHITECTURE  /  PERFORMANCE  /  SECURITY  /  ACCESSIBILITY  /  MOTION  /  CLEAN CODE  /  ARCHITECTURE  /  PERFORMANCE  /  SECURITY  /  ACCESSIBILITY  /  MOTION  /  CLEAN CODE</text>
+      <text x="1210" y="476" class="gold">ARCHITECTURE  /  PERFORMANCE  /  SECURITY  /  ACCESSIBILITY  /  MOTION  /  CLEAN CODE</text>
+    </g>
+  </g>
+</svg>
+
